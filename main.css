@@ -1,0 +1,66 @@
+
+  .flip-card {
+    background-color: transparent;
+    width: 569px;
+    height: 669px;
+    
+    border-style: ;
+    perspective: 1000px; 
+  }
+  
+  
+  .flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+    margin-left: 300px;
+    border: 5px outset LightCoral;
+  }
+  
+  /* Do an horizontal flip when you move the mouse over the flip box container */
+  .flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+  
+  /* Position the front and back side */
+  .flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden; /* Safari */
+    backface-visibility: hidden;
+  }
+  
+  /* Style the front side (fallback if image is missing) */
+  .flip-card-front {
+    background-color: #bbb;
+    color: black;
+  }
+  
+  /* Style the back side */
+  .flip-card-back {
+    background-color: white;
+    color: black;
+    transform: rotateY(180deg);
+  }
+  
+
+
+  .container {
+    position: relative;
+    max-width: 600px; /* Maximum width */
+    margin: 50px  ; /* Center it */
+  }
+  
+  .container .content {
+    position: absolute; /* Position the background text */
+    bottom: 0; /* At the bottom. Use top:0 to append it to the top */
+    background: rgb(0, 0, 0); /* Fallback color */
+    background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
+    color: #f1f1f1; /* Grey text */
+    width: 100%; /* Full width */
+    padding: 40px; /* Some padding */
+  }
